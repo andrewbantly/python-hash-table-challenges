@@ -27,6 +27,16 @@ the character w occurs 1 times
 the character r occurs 1 times
 the character d occurs 1 times
 '''
-
 def character_count(string):
-  pass
+  hash_table = {}
+  for letter in string:
+      if letter in hash_table:
+        hash_table[letter] += 1
+      else:
+        hash_table[letter] = 1
+  for key in hash_table:
+    print(f"the character {key} occurs {hash_table[key]} times.")
+
+character_count("elephant") 
+    
+    
